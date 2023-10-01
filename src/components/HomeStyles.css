@@ -1,0 +1,58 @@
+.btn
+{
+    background-color: #17cf97;
+    color: white;
+    align-items: center;
+    border: none;
+    outline: none;
+    border-radius: 3rem;
+    cursor: pointer;
+    width: 140px;
+    height: 40px;
+    padding: 5px;
+}
+
+.btn a
+{
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn a:hover
+{
+    color: white;
+}
+
+.btn a.active
+{
+    color: black;
+}
+
+.home
+{
+    height: 70vh;
+    background: linear-gradient(rgba(33,33,33,0.522),rgba(33,33,33,0.522)), url('../assets/reactjs.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    padding: 12px;
+}
+
+.title
+{
+    color: white;
+    padding: 0px 10px 0px 10px;
+    font-family: 'Mochiy Pop One', sans-serif;
+}
+
+.subTitle
+{
+    color: white;
+    align-items: center;
+    padding: 0px 10px 10px 10px;
+}

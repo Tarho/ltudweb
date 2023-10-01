@@ -8,6 +8,8 @@ nav
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
 }
 
+
+
 #navbar
 { 
     display: flex;
@@ -46,7 +48,7 @@ nav
 #navbar li a:hover::after,
 #navbar li a.active::after
 {
-    content: "=))";
+    content: "";
     /*Đây là bug mà tôi tự tạo ra á. Gảnh ghê hông?*/
     width: 35%;
     height: 2px;
