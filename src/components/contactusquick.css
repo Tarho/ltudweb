@@ -2,15 +2,14 @@
   background-color: #000000;
   background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
   color: white;
-  height: 50%;
-  width: 50%;
+  height: 355px;
+  width: 600px;
   display: inline-block;
   align-items: center;
   text-align: center;
   justify-content: center;
-  margin: auto;
   padding-bottom: 10px;
-  margin: 5px 0px;
+  border-radius: 5rem;
 }
 .contact h1 {
   width: 25%;
@@ -22,6 +21,10 @@
   color: darkred;
   margin-left: 38%;
   padding-top: 5px;
+}
+.info {
+  height: 500px;
+  width: 400px;
 }
 .info h3 {
   font-size: 50px;
@@ -43,9 +46,12 @@ form textarea {
   border: 0;
   margin: 10px 0;
   padding: 20px;
+  width: 400px;
   outline: none;
   background: white;
   font-size: 16px;
+  margin-right: 50px;
+  margin-top: 20px;
 }
 
 form button {
@@ -59,6 +65,7 @@ form button {
   width: 50%;
   margin: auto;
   border-radius: 30px;
+  margin-left: 150px;
 }
 
 @media screen and (max-width: 850px) {
@@ -92,4 +99,19 @@ form button {
     width: auto;
     margin: auto;
   }
+}
+
+.custom-button {
+  padding: 15px;
+  background-color: red;
+  color: white;
+  font-size: 18px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  width: 30%;
+  margin: auto;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }

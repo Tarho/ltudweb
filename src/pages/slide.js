@@ -1,72 +1,125 @@
 import React from "react";
+import Slider from "react-slick";
 import "./slideStyle.css";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import "./slick.css";
+import "./slick-theme.css";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 function slide() {
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
+  const NextArrow = ({ onClick }) => {
+    return (
+      <div className="arrow next" onClick={onClick}>
+        <FaArrowRight />
+      </div>
+    );
   };
 
+  const PrevArrow = ({ onClick }) => {
+    return (
+      <div className="arrow previous" onClick={onClick}>
+        <FaArrowLeft />
+      </div>
+    );
+  };
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    autoplay: true,
+    speed: 4000,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
+  };
   return (
-    <div className="slide">
-      <h1>Our Product</h1>
-      <Carousel responsive={responsive}>
+    <div>
+      <div className="blogproduct">
+        <h2>Our Product</h2>
+      </div>
+      <Slider {...settings}>
         <div className="card">
-          <img src="https://play-lh.googleusercontent.com/uqq6a-fHayQxsNQkxB9ZZXag8N7Du5mOEKcScr9yltHqx3RKgCdr9VJHKGO2vY_GUe0" />
-          <h2>PUBG</h2>
+          <img src="https://play-lh.googleusercontent.com/HZ16nsxrSsoJoZx0JDJjpmRN2KC0eZRSTyS2O-Lgjw7BgjTU6W8uDSYNj1IMlbqmtQ" />
+          <h2>Pokemon Go</h2>
+          <p>Stragety</p>
           <p>
-            PUBG is a popular battle royale game where players fight to be the
-            last one standing on an island.
+            4.3 <i class="fa-solid fa-star fa-2xs"></i>
           </p>
+          <p>1.1 GB</p>
           <button id="btn"> Install </button>
         </div>
         <div className="card">
-          <img src="https://play-lh.googleusercontent.com/S3GPwY1-mc5876ZnMk65-VrG3Xlh1R8zgK-Q_LlnbjZ7llyyv0ZGWIlNnBM7LckMMzYy" />
-          <h2>League of Legends</h2>
+          <img src="https://play-lh.googleusercontent.com/sieZ2xKcpFG3dXsQNrdpWhWVTcYoEFxD2rPztlkOqCe5FoKI_19-LhLeEZp4lVhRkKI" />
+          <h2>Game of War</h2>
+          <p>Stragety</p>
           <p>
-            League of Legends is a highly competitive multiplayer online battle
-            arena (MOBA) game where teams of champions compete to destroy each
-            other's Nexus.
+            5.0 <i class="fa-solid fa-star fa-2xs"></i>
           </p>
+          <p>0.9 GB</p>
+          <button id="btn"> Install </button>
+        </div>
+        <div className="card">
+          <img src="https://play-lh.googleusercontent.com/LByrur1mTmPeNr0ljI-uAUcct1rzmTve5Esau1SwoAzjBXQUby6uHIfHbF9TAT51mgHm" />
+          <h2>Clash of Clans</h2>
+          <p>Stragety</p>
+          <p>
+            4.0 <i class="fa-solid fa-star fa-2xs"></i>
+          </p>
+          <p>1.2 GB</p>
+          <button id="btn"> Install </button>
+        </div>
+        <div className="card">
+          <img src="https://dl.memuplay.com/new_market/img/com.king.candycrushsaga.icon.2023-09-29-01-23-12.png" />
+          <h2>Candy Crush</h2>
+          <p>Entertainment</p>
+          <p>
+            4.5 <i class="fa-solid fa-star fa-2xs"></i>
+          </p>
+          <p>1.3 GB</p>
           <button id="btn"> Install </button>
         </div>
         <div className="card">
           <img src="https://play-lh.googleusercontent.com/2YtYwsMXgKqm_BWwqeww-gmpWqIKycpa799oypcctPxaGy6qEvmu5NMbQ6-ICQii6Q" />
-          <h2>Homescapes </h2>
+          <h2>Homescapes</h2>
+          <p>Entertainment</p>
           <p>
-            Homescapes is a mobile puzzle game where players complete match-3
-            levels to renovate a mansion.
+            4.7 <i class="fa-solid fa-star fa-2xs"></i>
           </p>
+          <p>2.3 GB</p>
           <button id="btn"> Install </button>
         </div>
         <div className="card">
-          <img src="https://cdn.tgdd.vn/2020/03/GameApp/Facebook-200x200.jpg" />
-          <h2>Facebook</h2>
+          <img src="https://play-lh.googleusercontent.com/uqq6a-fHayQxsNQkxB9ZZXag8N7Du5mOEKcScr9yltHqx3RKgCdr9VJHKGO2vY_GUe0" />
+          <h2>PUBG</h2>
+          <p>Action</p>
           <p>
-            Facebook is a popular social media platform that allows users to
-            connect with friends, share content, and engage in various online
-            activities.
+            5.0 <i class="fa-solid fa-star fa-2xs"></i>
           </p>
+          <p>3.3 GB</p>
           <button id="btn"> Install </button>
         </div>
-      </Carousel>
+        <div className="card">
+          <img src="https://play-lh.googleusercontent.com/S3GPwY1-mc5876ZnMk65-VrG3Xlh1R8zgK-Q_LlnbjZ7llyyv0ZGWIlNnBM7LckMMzYy" />
+          <h2>Garena</h2>
+          <p>Action</p>
+          <p>
+            5.0 <i class="fa-solid fa-star fa-2xs"></i>
+          </p>
+          <p>4.0 GB</p>
+          <button id="btn"> Install </button>
+        </div>
+        <div className="card">
+          <img src="https://o.qoo-img.com/ggpht/wco3UbpLy6Krp1_TgGUtPeTxiyvS3kLbDg5qy-0b4_capKNgvCu0igGaSnji7GCfhAM" />
+          <h2>Dokkan Battle</h2>
+          <p>Action</p>
+          <p>
+            4.0 <i class="fa-solid fa-star fa-2xs"></i>
+          </p>
+          <p>1.5 GB</p>
+          <button id="btn"> Install </button>
+        </div>
+      </Slider>
     </div>
   );
 }
